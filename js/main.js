@@ -2,11 +2,15 @@ $(document).ready(function(){
 
 
     $(window).on("load",function(){
-      $(".load").delay(3000).fadeOut("slow");
+      $(".load").delay(2000).fadeOut("slow");
     });
 
     //menu scroll
     var wh = $(window).height();
+	
+    $(window).resize(function(){
+        wh = $(window).height();
+    });
 
     $('.menu_wrap>li').each(function(index){
         $(this).attr('data-a',index);
